@@ -47,8 +47,8 @@ while True:
 
         response=requests.get("http://10.80.161.228:8080/getalpha?hotel="+hotel+"&room="+str(room))
         alpha=int(response.json()['qr'])
-        # pw=create_rand(seed,alpha)
-        pw=1234
+        pw=create_rand(seed,alpha)
+        # pw=1234
         if(int(qrcodeData)==pw):
             pwm.start(3)
             time.sleep(1.0)
